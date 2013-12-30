@@ -1,5 +1,5 @@
 {
-    "name": "TestWeb BDD using Cucumber.js",
+    "name": "TestWeb_BDD_using_Cucumber",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
@@ -7,7 +7,7 @@
         "chai": "*",
         "webdriverjs": "*",
         "phantomjs": "*",
-        "cucumber": "*"
-
+        "cucumber": "*",
+        "selenium-webdriver": "*"
     }
 }
