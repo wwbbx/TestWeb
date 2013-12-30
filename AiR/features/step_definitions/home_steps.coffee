@@ -8,7 +8,7 @@ homeSteps = ->
     build()
 
   this.Given(/^I visit AiR server$/, (callback)->
-    driver.get('http://www.google.com')
+    driver.get('http://localhost:9898')
     callback()
   )
 
