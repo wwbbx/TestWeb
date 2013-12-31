@@ -1,17 +1,25 @@
+chai = require('chai')
+chai.should()
+
 homeSteps = ->
-  browser = require("../../support/world")
+  webdriver = require('selenium-webdriver')
+  driver = new webdriver.Builder().
+    withCapabilities(webdriver.Capabilities.chrome()).
+    build()
 
   this.Given(/^I visit AiR server$/, (callback)->
-    browser.get('http://localhost:1337')
+    driver.get('http://localhost:9898')
     callback()
   )
 
   this.Then(/^I should see the page title is: "(.*)"$/, (title, callback)->
-    browser.getTitle().then((result)->
+    driver.getTitle().then((result)->
       if(result.should.equal(title))
         callback()
       else
         callback.fail(new Error('Expected home page to have title ' + title))
+
+      driver.quit()
     )
   )
 
