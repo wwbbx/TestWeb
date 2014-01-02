@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "testAirWorld.js",
+  "sourceRoot": "",
+  "sources": [
+    "testAirWorld.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAKA;CAAA,KAAA,SAAA;;CAAA,CAAA,CAAW,IAAA,CAAX,IAAW;;CAAX,CAEA,CAAwC,EAAxC,GAAQ,CAAgC,cAAxC;CACU,EAAR,IAAO,IAAP,iBAAA;CADF,EAAwC;;CAFxC,CAMA,CAAQ,EAAR,GAAgB;;CANhB,CAOA,CAAA,EAAA,EAAO,eAAK;CAPZ"
+}

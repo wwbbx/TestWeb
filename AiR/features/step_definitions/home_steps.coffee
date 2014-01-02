@@ -2,7 +2,7 @@ homeSteps = ->
   AiRWorld = require("../../support/airWorld")
 
   this.Given(/^I visit AiR server$/, (callback)->
-    AiRWorld.visitServer()
+    AiRWorld.visit()
     callback()
   )
 

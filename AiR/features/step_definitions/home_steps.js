@@ -6,7 +6,7 @@
     var AiRWorld;
     AiRWorld = require("../../support/airWorld");
     this.Given(/^I visit AiR server$/, function(callback) {
-      AiRWorld.visitServer();
+      AiRWorld.visit();
       return callback();
     });
     return this.Then(/^I should see the page title is: "(.*)"$/, function(title, callback) {
