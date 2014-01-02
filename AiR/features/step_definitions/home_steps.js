@@ -3,14 +3,14 @@
   var homeSteps;
 
   homeSteps = function() {
-    var browser;
-    browser = require("../../support/world");
+    var AiRWorld;
+    AiRWorld = require("../../support/airWorld");
     this.Given(/^I visit AiR server$/, function(callback) {
-      browser.get('http://localhost:1337');
+      AiRWorld.visitServer();
       return callback();
     });
     return this.Then(/^I should see the page title is: "(.*)"$/, function(title, callback) {
-      return browser.getTitle().then(function(result) {
+      return AiRWorld.getTitle().then(function(result) {
         if (result.should.equal(title)) {
           return callback();
         } else {

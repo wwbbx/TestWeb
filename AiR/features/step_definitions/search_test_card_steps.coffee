@@ -1,14 +1,18 @@
 search_test_card_steps = ->
 
-  browser = require('../../support/world')
+  AiRWorld = require('../../support/airWorld')
 
+  # Background.Given. I need to prepare 4 test cards
+  # for rest of scenario's testing.
   this.Given(/^AiR server have 4 34970A test cards$/, (next)->
-    browser.get('http://localhost:1337')
+    AiRWorld.visitServer()
 
-    browser.getTitle().then((result)->
-      console.log 'title is: ' + result
-      next()
-    )
+    # Init() to make AiR server have nothing.
+    # Post 4 new test cards that we already prepared in this test scenario.
+
+    # call next to indicate cucumber that we are finished.
+    # and it can proceed to next step.
+    next()
 
     console.log 'I need to prepare 4 test cards.'
   )
@@ -24,7 +28,7 @@ search_test_card_steps = ->
   )
 
   this.Then(/^I should see (\d) test cards summary listed in "(.*)" panel$/, (count,  panelName, next)->
-    browser.getTitle().then((result)->
+    AiRWorld.getTitle().then((result)->
       console.log 'title is: ' + result
       next()
     )

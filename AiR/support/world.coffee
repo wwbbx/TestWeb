@@ -1,3 +1,7 @@
+# no longer use this.
+# I switched to use airWorld.coffee as
+# PageObject for AiR server.
+
 chai = require('chai')
 chai.should()
 

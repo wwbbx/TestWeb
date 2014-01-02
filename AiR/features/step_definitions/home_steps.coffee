@@ -1,13 +1,13 @@
 homeSteps = ->
-  browser = require("../../support/world")
+  AiRWorld = require("../../support/airWorld")
 
   this.Given(/^I visit AiR server$/, (callback)->
-    browser.get('http://localhost:1337')
+    AiRWorld.visitServer()
     callback()
   )
 
   this.Then(/^I should see the page title is: "(.*)"$/, (title, callback)->
-    browser.getTitle().then((result)->
+    AiRWorld.getTitle().then((result)->
       if(result.should.equal(title))
         callback()
       else

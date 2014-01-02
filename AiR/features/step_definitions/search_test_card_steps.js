@@ -3,14 +3,11 @@
   var search_test_card_steps;
 
   search_test_card_steps = function() {
-    var browser;
-    browser = require('../../support/world');
+    var AiRWorld;
+    AiRWorld = require('../../support/airWorld');
     this.Given(/^AiR server have 4 34970A test cards$/, function(next) {
-      browser.get('http://localhost:1337');
-      browser.getTitle().then(function(result) {
-        console.log('title is: ' + result);
-        return next();
-      });
+      AiRWorld.visitServer();
+      next();
       return console.log('I need to prepare 4 test cards.');
     });
     this.Given(/^I input "(.*)" into "Search Model Number" textbox$/, function(model, next) {
@@ -22,7 +19,7 @@
       return next();
     });
     this.Then(/^I should see (\d) test cards summary listed in "(.*)" panel$/, function(count, panelName, next) {
-      browser.getTitle().then(function(result) {
+      AiRWorld.getTitle().then(function(result) {
         console.log('title is: ' + result);
         return next();
       });
