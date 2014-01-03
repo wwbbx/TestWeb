@@ -1,5 +1,6 @@
 homeSteps = ->
   AiRWorld = require("../../support/airWorld")
+  hooks = require('../../support/after_hook')
 
   this.Given(/^I visit AiR server$/, (callback)->
     AiRWorld.visit()

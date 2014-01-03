@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "after_hook.js",
+  "sourceRoot": "",
+  "sources": [
+    "after_hook.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,IAAA,CAAA;;CAAA,CAAA,CAAQ,EAAR,IAAQ;CAOD,EAAc,CAAf,IAAe,CAAC,EAApB,EAAA;CACW,GAAT,GAAgB,CAAR,KAAR;CADF,IAAmB;CAPrB,EAAQ;;CAAR,CAWA,CAAiB,EAXjB,CAWM,CAAN;CAXA"
+}

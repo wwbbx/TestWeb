@@ -5,9 +5,4 @@
 
 airWorld = require('./airWorld')
 
-airWorld.visit('http://www.google.com', ->
-  console.log 'finish visiting google.com'
-)
-
-title = airWorld.getTitle()
-console.log 'retrieved title is: ' + title
+airWorld.browser.quit()

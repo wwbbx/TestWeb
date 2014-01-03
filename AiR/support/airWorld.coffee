@@ -32,16 +32,19 @@ airWorld = {
     console.log 'prepare 4 sample test cards for AiR'
 
   inputSearchModel: (model)->
-    # TODO: make this as promise
-    console.log 'input given model number: ' + model + ' input model search textbox'
+    # return promise
+    return client.findElement(webdriver.By.name('searchModelInput')).sendKeys(model)
 
   clickButton: (buttonName)->
-    # TODO: make this as promise
-    console.log "click button (#{buttonName}) on AiR"
+    # return promise
+    return client.findElement(webdriver.By.name('searchButton')).click()
 
   getSearchResult: ->
-    # TODO: make this as promise
-    console.log 'return search result'
+    # return promise. Use getSearchResult().then((value)->) to post process search value.
+    return client.fineElement(webdriver.By.name('searchResultSummary')).getProperty('value')
+
+  quit: ->
+    client.quit()
 
 }
 module.exports = airWorld

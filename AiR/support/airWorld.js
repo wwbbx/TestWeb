@@ -30,13 +30,16 @@
       return console.log('prepare 4 sample test cards for AiR');
     },
     inputSearchModel: function(model) {
-      return console.log('input given model number: ' + model + ' input model search textbox');
+      return client.findElement(webdriver.By.name('searchModelInput')).sendKeys(model);
     },
     clickButton: function(buttonName) {
-      return console.log("click button (" + buttonName + ") on AiR");
+      return client.findElement(webdriver.By.name('searchButton')).click();
     },
     getSearchResult: function() {
-      return console.log('return search result');
+      return client.fineElement(webdriver.By.name('searchResultSummary')).getProperty('value');
+    },
+    quit: function() {
+      return client.quit();
     }
   };
 

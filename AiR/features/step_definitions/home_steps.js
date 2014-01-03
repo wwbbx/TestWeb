@@ -3,8 +3,9 @@
   var homeSteps;
 
   homeSteps = function() {
-    var AiRWorld;
+    var AiRWorld, hooks;
     AiRWorld = require("../../support/airWorld");
+    hooks = require('../../support/after_hook');
     this.Given(/^I visit AiR server$/, function(callback) {
       AiRWorld.visit();
       return callback();
